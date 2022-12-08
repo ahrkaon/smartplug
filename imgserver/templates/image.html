@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<h1>image</h1>
+		<div id="image"> <img src='static/img/test1.jpg' style='width:200px;height:200px;'>
+		</div>
+		<div>
+            <div id="here"> again dynamic content <span id='off'>7</span></div>
+            <div>ABC</div>
+         </div>
+         <script>
+            $(document).ready(function(){
+                var counter = 7;
+            window.setInterval(function(){
+             counter--;
+              if(counter>=0){
+                document.getElementById('off').innerHTML=counter;
+              }
+              if (counter===0){
+                counter=7;
+              }
+            $("#image").load(" #image");
+            }, 10000);
+            });
+         </script>
+	</body>
+</html>
